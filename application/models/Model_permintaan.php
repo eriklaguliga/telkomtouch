@@ -200,7 +200,8 @@
                'isi_nota' => $this->input->post('isi_nota'),
                'status'=>1,
                'last_edit' => $this->input->post('namauser'),
-               'tobeuser' => $namauser1
+               'tobeuser' => $namauser1,
+               'catatan' => $this->input->post('isi_catatan')
            );
            
            $this->db->where('id_nota', $id_nota);
@@ -216,6 +217,10 @@
                'catatan' => $this->input->post('isi_catatan'),
            );
            $this->db->insert('tbl_transaksi',$data5);
+           $data['jumlah'] = $this->Model_permintaan->getjumlahnotif();
+            $data['hasil'] = $this->Model_permintaan->ambilnotif();
+            $data['profil'] = $this->Model_permintaan->get_profile();
+            
        }
 
        function editreturn() {

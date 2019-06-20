@@ -102,7 +102,7 @@
                      <div class="form-group">
                         <span class="col-xs-2" style="margin-left:10px; margin-bottom:15px; font-size:18px">nama use case &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</span>
                         <div class="col-xs-3">
-                           <input class="form-control" type="text" value="<?php echo $nota['isi_nota']; ?>" readonly="" id="user" name="namauser" maxlength="50"  required />
+                           <input class="form-control" type="text" value="<?php echo $nota['isi_nota']; ?>" readonly="" id="user" name="usecase" maxlength="50"  required />
                         </div>
                      </div>
                   </div>
@@ -130,6 +130,16 @@
                         <div class="col-xs-4">
                            <textarea disabled class="textarea" name="isi_nota" placeholder="isi nota"
                               style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"><?php echo $nota['stakeholder'] ?></textarea>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="col-xs-12" style="margin-top:15px">
+                     <div class="form-group">
+                        <span class="col-xs-2" style="margin-left:10px; margin-bottom:15px; font-size:18px">lihat catatan sebelumnya &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: </span>
+                        <div class="col-xs-4">
+                           <textarea disabled class="textarea" name="catatan" placeholder="catatan sebelumnya"
+                              style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"><?php echo $nota['catatan'] ?></textarea>
                         </div>
                      </div>
                   </div>

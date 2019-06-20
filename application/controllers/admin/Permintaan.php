@@ -107,7 +107,8 @@ Class Permintaan extends CI_Controller {
         $data['profil'] = $this->Model_permintaan->get_profile();
         if (isset($_POST['submit'])) {
             $this->Model_permintaan->edit();
-            redirect('admin/permintaan', $data);
+            redirect('admin/home', $data);
+            
         } else {
             $id = $this->uri->segment(4);
             $this->db->select('*');
