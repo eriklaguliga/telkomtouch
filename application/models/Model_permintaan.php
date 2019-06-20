@@ -10,18 +10,18 @@
       
        function add() {
 
-        $config['upload_path']  ='./upload/';
-        $config['allowed_types']  ='doc|docx|pdf|gif|jpg|png';
-        $config['max_size'] =0;
-        $this->load->library('upload',$config);
+        // $config['upload_path']  ='./upload/';
+        // $config['allowed_types']  ='doc|docx|pdf|gif|jpg|png';
+        // $config['max_size'] =0;
+        // $this->load->library('upload',$config);
 
-        if( ! $this->upload->do_upload('filename')){
-          $error = array('error'=> $this->upload->display_errors());
-          // $data['jumlah'] = $this->getjumlahnotif();
-          // $data['hasil'] = $this->ambilnotif();
-          // $data['profil'] = $this->get_profile();
-          // $this->load->view('admin/permintaan/add',$data);
-        }else{
+        // if( ! $this->upload->do_upload('filename')){
+        //   $error = array('error'=> $this->upload->display_errors());
+        //   // $data['jumlah'] = $this->getjumlahnotif();
+        //   // $data['hasil'] = $this->ambilnotif();
+        //   // $data['profil'] = $this->get_profile();
+        //   // $this->load->view('admin/permintaan/add',$data);
+        // }else{
           $upload_data = $this->upload->data();
            $data = array(
                'nomor' => $this->input->post('nomor'),
@@ -31,7 +31,7 @@
                'deskripsi' => $this->input->post('deskripsi'),
                'nama_usecase' => $this->input->post('use_case'),
                'stakeholder' => $this->input->post('stakeholder'),
-               'file_' =>   $upload_data['file_name'],
+              //  'file_' =>   $upload_data['file_name'],
                'id_bidang' =>$this->input->post('id_bidang'),
                'last_edit' => $this->session->userdata('username'),
                'tobeuser'=> $this->input->post('namauser'),
@@ -92,7 +92,7 @@
                'tobeuser' => $namauser1
             );
             return $hasil2['username'];
-          }
+          
    
        }
 
