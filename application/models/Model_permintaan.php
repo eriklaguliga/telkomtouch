@@ -9,6 +9,7 @@
       }
       
        function add() {
+        // nanti dibuka
 
         // $config['upload_path']  ='./upload/';
         // $config['allowed_types']  ='doc|docx|pdf|gif|jpg|png';
@@ -22,7 +23,7 @@
         //   // $data['profil'] = $this->get_profile();
         //   // $this->load->view('admin/permintaan/add',$data);
         // }else{
-          $upload_data = $this->upload->data();
+          // $upload_data = $this->upload->data();
            $data = array(
                'nomor' => $this->input->post('nomor'),
                'disposisi' => $this->input->post('disposisi'),
